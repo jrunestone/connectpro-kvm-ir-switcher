@@ -13,7 +13,7 @@ I use this on a Raspberry Pi 3b+ with just a 30mA IR diode directly shoved into 
 ## Setup and run
 1. Add the following line to your Pi:s `/boot/firmware/config.txt`: `dtoverlay=gpio-ir-tx,gpio_pin=17`.
 2. Connect an IR diode to your chosen GPIO. Again, look up IR circuits.
-3. Verify it works by calling `ir-ctl -S nec:866b02fd` (select device 1).
+3. Verify it works by calling `ir-ctl -S nec:0x866b02fd` (select device 1).
 3. Start the server by `python kvm-server.py`.
 4. Make a request to `http://<ip>:5000/1` etc.
 
